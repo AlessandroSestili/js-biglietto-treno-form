@@ -27,18 +27,22 @@ myForm.addEventListener("submit" , function(event){
     document.getElementById("costobiglietto").innerHTML = prezzoBiglietto + "€"
 
     if(eta == "minorenne") {
-        document.getElementById("costobiglietto").innerHTML = prezzoBiglietto - (prezzoBiglietto * 0.20).toFixed(2) + "€"
+        document.getElementById("costobiglietto").innerHTML = prezzoBiglietto - (prezzoBiglietto * 0.20) + "€"
 
     } else if (eta == "maggiorenne") {
         document.getElementById("costobiglietto").innerHTML = prezzoBiglietto + "€"
 
     } else {
-        document.getElementById("costobiglietto").innerHTML = prezzoBiglietto - (prezzoBiglietto * 0.40).toFixed(2) + "€"
+        document.getElementById("costobiglietto").innerHTML = prezzoBiglietto - (prezzoBiglietto * 0.40) + "€"
 
     }
 
     //stampa il numero CP che varia da 90000 a 100000
     document.getElementById("codicecp").innerHTML = GeneraNumeroRandomCompresoTra(90000 , 100000)
+
+    // stampo carrozza 
+    document.getElementById("carrozza").innerHTML = GeneraNumeroRandomCompresoTra(1 , 100)
+
 
     //stampa lo sconto applicato 
     document.getElementById("offerta").innerHTML = "sconto " + eta 
