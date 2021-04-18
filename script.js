@@ -24,29 +24,29 @@ myForm.addEventListener("submit" , function(event){
     // document.getElementById("offertapasseggero").innerHTML = 
     document.getElementById("carrozzapasseggero").innerHTML = "7"
     document.getElementById("codicecp").innerHTML = Math.random().toFixed(2)
-    document.getElementById("")
-
+    document.getElementById("costobiglietto").innerHTML = calcolaPrezzoBiglietto(km , eta)
 
 }) 
 
 
-function calcolaPrezzoBiglietto(kmDaPercorrere) {
+function calcolaPrezzoBiglietto(kmDaPercorrere , etaPasseggero) {
 
     var prezzoAlKm = 0.21;
     var prezzoBiglietto = (kmDaPercorrere * prezzoAlKm);
 
-    if (eta === "minorenne") {
+    if (etaPasseggero === "minorenne") {
         prezzoBiglietto = (prezzoBiglietto - (prezzoBiglietto * 0.20) ).toFixed(2) 
     } 
     
-    if (eta === "over65") {
+    if (etaPasseggero === "over65") {
         prezzoBiglietto = (prezzoBiglietto - (prezzoBiglietto * 0.40) ).toFixed(2) 
     }
 
-    if (eta === "maggiorenne") {
+    if (etaPasseggero === "maggiorenne") {
         prezzoBiglietto = (prezzoBiglietto - (prezzoBiglietto * 1) ).toFixed(2) 
     }
 
 }
+
 
 
