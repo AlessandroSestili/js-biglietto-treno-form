@@ -1,22 +1,111 @@
-Partendo dall'esercizio del biglietto, aggiungiamo la parte visiva come da screenshot
-Creiamo un finto biglietto del treno con:
-Nome passeggero
-Codice treno (numero casuale tra 90000 e 100000 escluso)
-Numero carrozza
-Prezzo calcolato
-Categoria selezionata dall'utente
-Aggiungiamo una piccola animazione al click su "Crea" e "Annulla", se clicchiamo su annulla dobbiamo ripulire il form.
+APPUNTI LEZIONE 29_js_dom
+
+il DOM è l'insime di tutti gli elementi della pagina HTML, serve per far rendere comprensibile al javascript
+
+    gli ELEMENTS sono i tag HTML tipo body, h2, ul ecc..
+
+    l INNER HTML è il testo che contiene il TAG; mentre l'OUTER è tutto il codice che va preso (da apertura a chiusura tag)
 
 
-COME FARE?
+Cosa si puo fare con JavaScript?
 
--fare un form e inserire dati all'interno
+    - selezionare un ELEMENT tramite getElementById 
 
--fare apparire un pezzo di html per far mostrare il biglietto dell utente, in base ai dati che ha inserito
+    - element.class.list 
 
--mettere in un form la fascia d'età per far calcolare lo sconto
+    - element.INNERHTML
 
--mettere animazione su il pulsante crea e annulla 
+    - element.style
 
--come ripulire il form se clicca annulla 
+    - element.addEventlistener() : aggancia una funzione ad un determinato evento
+
+    - element.value : 
+
+    E tanti altri...
+
+
+LIVE CODING 
+
+    // per AGGIUNGERE una classe con className
+    // elementH1.className += " text-red";
+
+
+// per TOGLIERE una CLASSE tramite CLASSLIST - remove / add (Su internet explorer funziona male) - si puo anche aggiungere una classe con classList
+
+    // elementH1.classList.add("ciao")
+
+    // console.log(elementH1.classList);
+
+    // elementH1.classList.remove("text-red");
+
+    // console.log(elementH1.classList);
+
+
+// elementH1.style con STYLE possiamo utilizzare una qualsiasi regola che potrei utilizzare in CSS (SINGOLI STILI)
+    
+    // elementH1.style.regola = "blue" -> qua ci va la regola da utilizzare 
+
+        // va messo sotto forma di stringa la forma della regola 
+
+        // se voglio dare un valore con una variabile , devo concatenare l'unita di misura dopo il numero perchè javascript non riconosce appunto l unita di misura se non viene specificata 
+
+
+// Come scatenare un evento CLICK con addEventListener(ADD EVENT LISTENER) 
+     
+    // è come se rimanessiamo in ascolto di un EVENTO
+
+    // Quale evento? quando si clicca 
+
+    //Possiamo per esempio aggiungere un colore rosso ad un H1 quando ci si clicca sopra
+
+    // come secondo argomento serve una FUNZIONE per forza
+
+    //Questo viene fatto solo quando l utente clicca
+
+    // l evento accade ogni singola volta che l utente clicca sopra all event listener
+
+    // All interno possiamo utilizzare ulteriori funzioni 
+        //come per esempio una funzione che genra un numero random -> 
+
+        // element.H1.addEventListener("click" , function() {
+
+        //     console.log("l'utente ha cliccato l'h1" + funzione())
+
+        // }
+
+
+// Posso rendere la funzione dell evento piu flessibile tramite EVENT
+
+    // se non c'è unn event listener a monte non possiamo fare nulla 
+
+
+// pero possiamo fare un array che contiene tutti gli elementi da detectare 
+
+
+
+// per essere piu veloci possiamo assegnare una variabile ad ogni elemnto html ed inserirli in un array
+//Poi fare un ciclo che assegna una funziona onclick
+
+
+
+
+
+// Possiamo selezionare un elemento tramite la sua classe con getElementsByClassName
+
+    // questa funzione pero va a selezionare tutti gli elementi che ha quella classe 
+
+    //infatti se si va a leggere il getelementbyid è singolare, mentre getelementsbyclassname è plurale
+
+
+
+
+
+
+
+
+
+    
+
+    
+
 

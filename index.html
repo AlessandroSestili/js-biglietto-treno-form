@@ -4,9 +4,80 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- link al css  -->
+    <link rel="stylesheet" href="style.css">
+
     <title>js-biglietto-treno-form</title>
 </head>
 <body>
-    
+
+    <!-- titolo sopra il form  -->
+    <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+
+    <!-- form con nome, cognome, km da percorrere e la fascia di età  -->
+    <form action="" id="myForm">
+
+        <div class="container-up">
+
+            <!-- input nome, cognome  -->
+            <input type="text" placeholder="Nome Cognome" name="nome" class="up">
+            <input type="text" placeholder="Km da percorrere" name="km" class="up">
+
+            <!-- input maggiorenne, minorenne e over65  -->
+            <select name="eta" id="eta" class="up">
+                <option value="minorenne">Minorenne</option>
+                <option value="maggiorenne">Maggiorenne</option>
+                <option value="over65">Over 65</option>
+            </select>
+
+        </div>
+
+        <br>
+
+        <div class="container-down">
+
+            <!-- input INVIA  -->
+
+            <input type="submit" value="Genera">
+
+            <!-- input RESET -->
+
+            <input type="reset" value="Annulla">
+
+        </div>
+
+    </form>
+
+    <div id="bigliettoutente">
+
+        <h1>IL TUO BIGLIETTO</h1>
+
+        <div id="datiutente">
+
+            <h2>DETTAGLIO PASSEGGERI</h2>
+
+            <div id="partecentrale">
+
+                <span id="nomepasseggero">NOME PASSEGGERO</span>
+
+                <span id="offertapasseggero">Offerta</span>
+
+                <span id="carrozzapasseggero">Carrozza</span>
+
+                <span id="codicecp">Codice CP</span>
+
+                <span id="costobiglietto">Costo biglietto</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- link al js  -->
+    <script src="script.js"></script>
 </body>
 </html>
