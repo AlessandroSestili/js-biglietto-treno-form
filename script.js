@@ -20,33 +20,25 @@ myForm.addEventListener("submit" , function(event){
     console.log("Questo è il nome dell'utente: " + nome + ", mentre questi sono i km che deve percorrere: " + km + ". Questa è la sua età: " + eta)
 
 
-    document.getElementById("nomepasseggero").innerHTML = nome;
-    // document.getElementById("offertapasseggero").innerHTML = 
-    document.getElementById("carrozzapasseggero").innerHTML = "7"
-    document.getElementById("codicecp").innerHTML = Math.random().toFixed(2)
-    document.getElementById("costobiglietto").innerHTML = calcolaPrezzoBiglietto(km , eta)
+    var prezzoAlKm = 0.21;
+    var prezzoBiglietto = (km * prezzoAlKm);
 
+    document.getElementById("costobiglietto").innerHTML = prezzoBiglietto + "€"
+
+    if(eta == "minorenne") {
+        document.getElementById("costobiglietto").innerHTML = prezzoBiglietto - (prezzoBiglietto * 0.20).toFixed(2) + "€"
+
+    } else if (eta == "maggiorenne") {
+        document.getElementById("costobiglietto").innerHTML = prezzoBiglietto + "€"
+
+    } else {
+        document.getElementById("costobiglietto").innerHTML = prezzoBiglietto - (prezzoBiglietto * 0.40).toFixed(2) + "€"
+
+    }
 }) 
 
 
-function calcolaPrezzoBiglietto(kmDaPercorrere , etaPasseggero) {
 
-    var prezzoAlKm = 0.21;
-    var prezzoBiglietto = (kmDaPercorrere * prezzoAlKm);
-
-    if (etaPasseggero === "minorenne") {
-        prezzoBiglietto = (prezzoBiglietto - (prezzoBiglietto * 0.20) ).toFixed(2) 
-    } 
-    
-    if (etaPasseggero === "over65") {
-        prezzoBiglietto = (prezzoBiglietto - (prezzoBiglietto * 0.40) ).toFixed(2) 
-    }
-
-    if (etaPasseggero === "maggiorenne") {
-        prezzoBiglietto = (prezzoBiglietto - (prezzoBiglietto * 1) ).toFixed(2) 
-    }
-
-}
 
 
 
