@@ -1,9 +1,9 @@
 
 //Aggiungiamo un EventListener in ascolto per il tasto SUBMIT
 myForm.addEventListener("submit" , function(event){
-    
+
     //myForm seleziona il mio form dall'HTML tramite il suo ID
-    var myForm = document.getElementById("myForm")
+    myForm = document.getElementById("myForm")
 
     //Preveniamo la caratteristica di default del SUBMIT che normalmente ricaricherebbe la pagina 
     event.preventDefault();

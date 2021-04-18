@@ -43,6 +43,27 @@ body {
     margin: 30px 20px 0 20px;
 }
 
+#myForm .container-down input:focus {
+    animation: ani-input 1s;
+    
+}
+
+@keyframes ani-input {
+    0% {
+        background-color:  lightgrey
+
+
+    } 
+    50% {
+        background-color:  rgb(170, 42, 81); 
+
+    }
+    100% {
+        background-color:  lightgrey
+
+    }
+}
+
 /* stili per l'H1 iniziale "calcola il prezzo del tuo biglietto" e "il tuo biglietto " */
 h1 {
     text-align: center;
